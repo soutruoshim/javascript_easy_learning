@@ -124,8 +124,58 @@ let message = "Hi i am sout ruoshim";
 const arrayMessage = message.split(" ");
 console.log(arrayMessage.join('-'));
 
+// Es6 Feature: Map
+let numbers10 = [1, 2, 3, 4];
+let mulByTwo = [];
+for(let num of numbers10){
+    mulByTwo.push(num * 2);
+}
+console.log(mulByTwo);
+const mulByTwo2 = numbers10.map(function(num){
+    return num * 2;
+});
+console.log(mulByTwo2);
 
+const mulByTwo3 = numbers10.map((num)=> num * 2);
+console.log(mulByTwo3);
 
+let doctors3 =[
+    {name: "sout", age: 29},
+    {name: "ruoshim", age: 39},
+    {name: "dary", age: 19}
+];
+const docName = doctors3.map((doctor)=>doctor.name);
+console.log(docName);
+
+// Es6 Feature: Filter an array
+let numbers11 = [1,2,3,4,5,6,7];
+let onlyOddNumbers = [];
+for(let num of numbers11){
+    if(num % 2 === 1){
+        onlyOddNumbers.push(num);
+    }
+}
+console.log(onlyOddNumbers);
+const onlyOddNumbers2 = numbers11.filter(function(num){
+     return num % 2 === 1;
+});
+console.log(onlyOddNumbers2);
+
+const onlyOddNumbers3 = numbers11.filter((num)=> num % 2 === 1);
+console.log(onlyOddNumbers3);
+
+// Es6 Feature: Reduce
+let numbers12 = [10, 20, 30];
+let sum = 0;
+for(let num of numbers12){
+    sum = sum + num;
+}
+console.log(sum);
+sum = 0;
+const ReduceSum = numbers12.reduce(function(sum, num){
+    return sum + num;
+});
+console.log(ReduceSum);
 
 
 
