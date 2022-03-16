@@ -76,4 +76,9 @@ wm.set(object2, 19483);
 console.log(wm)
 console.log(wm.has(object1))
 
+// Module
+const addnumber = (num1, num2) => num1 + num2;
+export default addnumber;
+
+
 
